@@ -1,0 +1,29 @@
+server:
+  port: 1313
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 
+    url: jdbc:mysql://localhost:3053/mysql_fface?useSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+  main:
+    allow-circular-references: true
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+
+## Specify the path of the OpenAPI documentation
+springdoc:
+ api-docs:
+   path: /api-docs
+ swagger-ui:
+   path: /swagger-ui.html
+   enabled: true
